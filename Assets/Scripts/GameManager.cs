@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Text scoreText;
     private int score = 0;
     private bool isGameOver = false;
 
@@ -18,7 +19,9 @@ public class GameManager : MonoBehaviour
     public void IncrementScore(int value)
     {
         score += value;
+        scoreText.text = score.ToString();
     }
+
     void GameOver()
     {
         isGameOver = true;
